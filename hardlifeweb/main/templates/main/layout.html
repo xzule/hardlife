@@ -1,0 +1,199 @@
+{% load static %}
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        @media only screen and (min-width: 12.9in) {
+            .background {
+                height: 100vh;
+                background: url('../../static/main/img/backgroundimage2.jpg');
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .wrapper {
+                display: flex;
+                width: 100em;
+                height: 56.945em;
+                background: #DCDCDC;
+                margin: auto;
+            }
+
+            aside {
+                background: #403f3f;
+                height: 100%;
+                color: #fff;
+                display: flex;
+                flex-direction: column; /* Добавил эту строку, чтобы элементы внутри aside располагались вертикально */
+                padding: 1em;
+                margin: 0;
+                width: 21em;
+                box-sizing: border-box;
+                border: solid;
+                border-color: #000000;
+            }
+
+            .menu {
+                margin-left: 10%;
+                overflow: hidden;
+                padding: 5.1%;
+            }
+
+            .menu a {
+                display: block;
+                overflow-wrap: break-word;
+            }
+
+            .menu a.logo {
+                color: #fff;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+
+            .menu a.main {
+                color: #fff;
+                transition: transform .5s ease;
+                font-size: 1.3rem;
+                margin-top: 15%;
+                font-weight: bold;
+            }
+
+            .menu a.main:hover {
+                color: #55d46a;
+                transform: scale(1.05);
+            }
+
+            aside img {
+                width: 100%;
+                height: auto;
+            }
+
+            main {
+                width: calc(120em - 21em);
+                justify-content: center;
+                padding: 0;
+                height: 95%;
+                box-sizing: border-box;
+            }
+
+            main .banner {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                height: 10em;
+            }
+
+            main .banner img {
+                width: 100%;
+                display: block;
+            }
+
+            .description {
+                overflow: hidden;
+                text-align: center;
+                width: 100%;
+                margin-left: 0%;
+                padding: 0;
+                margin-top: 1%;
+            }
+
+            .description h1 {
+                font-size: 3rem;
+            }
+
+<!--            footer {-->
+<!--                text-align: center;-->
+<!--                width: 100%;-->
+<!--                height: 5%;-->
+
+<!--            }-->
+
+<!--            .youtube img {-->
+<!--                width: 7%;-->
+<!--                height:auto;-->
+<!--            }-->
+
+<!--            .telegram img {-->
+<!--                width: 5%;-->
+<!--                height:auto;-->
+<!--            }-->
+
+        }
+@media only screen and (max-width: 12.9in) {
+    .background {
+        background-size: cover;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        height: auto;
+        background: #DCDCDC;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    .menu {
+        display: none; /* Скрывает содержимое .menu на маленьких экранах */
+    }
+
+    aside img {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    main .banner {
+        display: none; /* Скрывает баннер на маленьких экранах */
+    }
+
+    .description {
+        text-align: center;
+        padding: 2em;
+    }
+
+    .description h1 {
+        font-size: 2rem;
+        margin: 0;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="wrapper">
+            <aside>
+                <img src="{% static 'main/img/logo.png' %}" alt="logo">
+                <div class="menu">
+                    <a class="logo">Hardlife</a>
+<!--                        <a class="nav">Навигация</a>-->
+                    <a class="main" href="{% url 'home' %}">Home</a>
+                </div>
+            </aside>
+            <main>
+                <div class="banner">
+                <img class="imagebanner" src="{% static 'main/img/banner7.png' %}" alt="banner">
+                </div>
+                {% block content %}
+                {% endblock %}
+            </main>
+<!--            <footer>-->
+<!--                <a class="youtube" href="https://youtu.be/lep_owyA5JI?si=C_X47sIf3__6THKI"><img src="{% static 'main/img/youtube.png'%}"></a>-->
+<!--                <a class="telegram" href="https://t.me/tumansofiia"><img src="{% static 'main/img/telegram.png'%}"></a>-->
+<!--            </footer>-->
+        </div>
+    </div>
+</body>
+</html>

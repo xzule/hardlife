@@ -1,0 +1,108 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: block;
+        }
+
+        .formm {
+            padding: 0;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            text-align: center;
+            margin-left: 0%;
+        }
+
+        form {
+            padding: 1%;
+            margin-top: 10%;
+            margin-left: 40%;
+            margin-right: 40%;
+            border-radius: 1%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        form button {
+            background-color: #403f3f;
+            color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            transition: transform .5s ease;
+        }
+
+        form button:hover {
+            color: #55d46a;
+            transform: scale(1.05);
+        }
+
+<!--        form button span {-->
+<!--            display: inline-block;-->
+<!--            transition: transform .5s ease;-->
+<!--        }-->
+
+<!--        form button:hover span{-->
+<!--            color: #55d46a;-->
+<!--            transform: scale(1.05);-->
+<!--        }-->
+
+        @media only screen and (max-width: 12.9in) {
+            .formm {
+                padding-bottom: 10%;
+            }
+
+            form {
+                margin-left: 15%;
+                margin-right: 15%;
+                padding: 5%;
+            }
+        }
+
+    </style>
+    <title>Регистрация</title>
+</head>
+<body>
+
+<div class="formm">
+    <form method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+
+<!--        {{ form.as_p }}-->
+        <label for="id_username">Имя пользователя:</label>
+        <input type="text" id="id_username" name="username" required>
+
+        <label for="id_password1">Пароль:</label>
+        <input type="password" id="id_password1" name="password1" required>
+
+        <label for="id_password2">Подтверждение пароля:</label>
+        <input type="password" id="id_password2" name="password2" required>
+
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+</div>
+
+</body>
+{% endblock %}
+
