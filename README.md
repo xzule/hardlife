@@ -6,3 +6,6 @@ It remains to add:
 - middleware (commented out);
 - django notifications;
 - content.
+
+![@mediamin-width12.9in](https://github.com/xzule/hardlife/blob/main/min-width12.9in.jpeg)
+![@mediamax-width12.9in](https://github.com/xzule/hardlife/blob/main/max-width12.9in.jpeg)
