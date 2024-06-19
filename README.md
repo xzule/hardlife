@@ -8,4 +8,4 @@ It remains to add:
 - content.
 
 <img src="https://github.com/xzule/hardlife/blob/main/min-width12.9in.jpeg" width="500">
-<img src="https://github.com/xzule/hardlife/blob/main/max-width12.9in.jpeg" width="500">
+<img src="https://github.com/xzule/hardlife/blob/main/max-width12.9in.jpeg" width="250">
