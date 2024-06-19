@@ -8,4 +8,4 @@ It remains to add:
 - content.
 
 ![@mediamin-width12.9in](https://github.com/xzule/hardlife/blob/main/min-width12.9in.jpeg)
-![@mediamax-width12.9in](https://github.com/xzule/hardlife/blob/main/max-width12.9in.jpeg)
+        ![@mediamax-width12.9in](https://github.com/xzule/hardlife/blob/main/max-width12.9in.jpeg)
