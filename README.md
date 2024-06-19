@@ -7,5 +7,5 @@ It remains to add:
 - django notifications;
 - content.
 
-<img src="https://github.com/xzule/hardlife/blob/main/scalesignup.jpeg" width="500">
+<img src="https://github.com/xzule/hardlife/blob/main/scalesignup.png" width="500">
 <img src="https://github.com/xzule/hardlife/blob/main/max-width12.9in.jpeg" width="200">
